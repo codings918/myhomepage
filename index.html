@@ -4,78 +4,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>나의 홈페이지</title>
+    <title>SoundRender | 공식 웹사이트</title>
   <style>
-     
-     html {
+    html {
       scroll-behavior: smooth;
     }
     body {
-    font-family: sans-serif;
+    font-family: 'segoe UI', sans-serif;
     background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    max-width: 800px;
-    margin: auto;
-    padding:20px;
-  }@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-}
-  h1 {
-    color: #333;
-  }
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #007acc;
-    font-weight: bold;
-  }
+    }
+    header {background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 100px 20px 60px;
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+     header p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+     nav {
+      background-color: #ffffff;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-  nav {
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
-  section {
-    margin-top: 100px;
-    padding: 50px 0;
-      border-top: 1px solid #ccc;
+    section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    section h2 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      header h1 {
+        font-size: 32px;
+      }
+      header p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
- <!-- ✅ 상단 메뉴 -->
+ <!-- ✅ 상단 내비게이션 -->
   <nav>
     <a href="about.html">소개</a>
     <a href="services.html">서비스</a>
     <a href="contact.html">연락처</a>
-  </nav>    
-   <!-- ✅ 메인 제목 -->
-  <h1>안녕하세요, 이혜현입니다!</h1>
-  <p>여기는 SoundRender의 공식 웹사이트입니다.</p>
-<!-- ✅ 소개 섹션 -->
+  </nav>
+
+  <!-- ✅ 대문 영역 -->
+  <header>
+    <h1>SoundRender</h1>
+    <p>차별화된 3D 콘텐츠와 감각적인 영상 편집으로<br />당신의 아이디어를 현실로 만듭니다.</p>
+  </header>
+
+  <!-- ✅ 소개 섹션 -->
   <section id="intro">
     <h2>회사 소개</h2>
-    <p>3D 콘텐츠와 영상 편집을 통해 감각적인 작품을 제작합니다.</p>
+    <p>
+      SoundRender는 시각적 임팩트를 중시하는 디지털 콘텐츠 전문 스튜디오입니다.<br />
+      Blender와 Unreal Engine을 활용하여 3D 영상, 인터랙티브 콘텐츠, 버추얼 스트리밍 등<br />
+      다양한 멀티미디어 프로젝트를 기획부터 제작까지 원스톱으로 제공합니다.<br />
+      창의성과 기술의 균형을 통해 고객의 브랜드 가치를 높이는 콘텐츠를 만듭니다.
+    </p>
   </section>
 
   <!-- ✅ 서비스 섹션 -->
   <section id="services">
     <h2>주요 서비스</h2>
     <ul>
-      <li>Blender 기반 3D 영상 제작</li>
-      <li>Unreal Engine 콘텐츠 개발</li>
-      <li>버추얼 유튜브 영상 편집</li>
+      <li>🎥 Blender 기반 3D 영상 제작</li>
+      <li>🕹 Unreal Engine 콘텐츠 개발</li>
+      <li>🎬 버추얼 유튜브 영상 편집</li>
     </ul>
-  </section>
-
-  <!-- ✅ 연락처 섹션 -->
-  <section id="contact">
-    <h2>문의하기</h2>
-    <p>Email: contact@soundrender.kr</p>
   </section>
 
 </body>
