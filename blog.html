@@ -3,57 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>블로그 | SoundRender</title>
+  <title>블로그</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
+      font-family: sans-serif;
+      background: #f5f5f5;
       margin: 0;
-      text-align: center;
+      padding: 0;
     }
     nav {
-      background-color: #ffffff;
+      background: white;
       padding: 20px;
+      text-align: center;
       border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
     nav a {
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
       color: #007acc;
       font-weight: bold;
-      font-size: 18px;
     }
     header {
+      padding: 50px;
       background: linear-gradient(135deg, #1f4037, #99f2c8);
       color: white;
-      padding: 80px 20px 50px;
-    }
-    header h1 {
-      font-size: 42px;
+      text-align: center;
     }
     .blog-container {
       max-width: 800px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: left;
+      margin: auto;
+      padding: 20px;
     }
     .post {
       background: white;
-      border-radius: 8px;
       padding: 20px;
       margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .post h2 {
-      margin-top: 0;
-      color: #333;
+      margin: 0;
     }
     .post time {
+      font-size: 13px;
       color: #888;
-      font-size: 14px;
     }
   </style>
 </head>
@@ -68,29 +61,46 @@
   </nav>
 
   <header>
-    <h1>SoundRender 블로그</h1>
-    <p>작업 이야기, 인사이트, 업데이트를 공유합니다</p>
+    <h1>블로그</h1>
+    <p>최근 작업과 이야기를 공유합니다</p>
   </header>
 
-  <div class="blog-container">
-    <div class="post">
-      <h2>🎬 첫 포트폴리오 영상 제작기</h2>
-      <time>2025-06-25</time>
-      <p>
-        첫 포트폴리오 영상을 Blender로 제작한 과정과 배운 점을 정리했습니다.<br />
-        카메라 워크, 라이팅, 오디오 연동까지 많은 시도를 해봤어요.
-      </p>
-    </div>
-
-    <div class="post">
-      <h2>📦 3D 에셋 워크플로우 정리</h2>
-      <time>2025-06-20</time>
-      <p>
-        반복 가능한 3D 제작 워크플로우를 정리했습니다.<br />
-        3단계 모델링 → 텍스처링 → 세팅 방식으로 효율이 많이 올라갔어요.
-      </p>
-    </div>
+  <div class="blog-container" id="blog-container">
+    <!-- JS가 글들을 자동으로 여기에 넣음 -->
   </div>
+
+  <script>
+    const posts = [
+      {
+        title: "🎬 첫 포트폴리오 영상 제작기",
+        date: "2025-06-25",
+        content: "첫 포트폴리오 영상을 Blender로 제작한 과정과 배운 점을 정리했습니다. 카메라 워크, 라이팅, 오디오 연동까지 시도했습니다."
+      },
+      {
+        title: "📦 3D 에셋 워크플로우 정리",
+        date: "2025-06-20",
+        content: "반복 가능한 3D 제작 워크플로우를 정리했습니다. 모델링 → 텍스처링 → 세팅 구조로 효율이 많이 올라갔어요."
+      },
+      {
+        title: "🧠 버튜버 영상 편집 팁",
+        date: "2025-06-15",
+        content: "컷 편집, 배경 합성, 자막 배치 등 영상 편집에서 자주 사용하는 팁들을 정리했습니다. 유튜버도 참고 가능!"
+      }
+    ];
+
+    const container = document.getElementById("blog-container");
+
+    posts.forEach(post => {
+      const div = document.createElement("div");
+      div.className = "post";
+      div.innerHTML = `
+        <h2>${post.title}</h2>
+        <time>${post.date}</time>
+        <p>${post.content}</p>
+      `;
+      container.appendChild(div);
+    });
+  </script>
 
 </body>
 </html>
